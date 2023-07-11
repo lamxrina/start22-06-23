@@ -28,7 +28,7 @@ function newSmileArray(newSmile, smileArray){
             smileArray[i] = newSmile;
         }
         else{
-            return
+            continue
         }
     }
 }
