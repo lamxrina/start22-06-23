@@ -3,6 +3,11 @@ function filmMaker(filmName, releaseYear, filmRating){
     this.releaseYear = releaseYear;
     this.filmRating = filmRating;
 }
+
+const exampleFilm = new filmMaker('Barbie', 2023, 8.9);
+console.log(exampleFilm);
+
+
 let filmsArray = [];
 
 const firstFilm = new filmMaker('Mulholland Drive', 2001, 9.1);
@@ -18,9 +23,10 @@ filmsArray.push(fifthFilm);
 
 console.log(filmsArray);
 
-for(let i=0; i<filmsArray.length; i++){
-    alert(`Film "${filmsArray[i].filmName}" is released in ${filmsArray[i].releaseYear} and is ${filmsArray[i].filmRating} out of 10 in the rating`);
+filmMaker.prototype.giveInfo  = function(){
+    console.log(`Film "${filmsArray[i].filmName}" is released in ${filmsArray[i].releaseYear} and is ${filmsArray[i].filmRating} out of 10 in the rating`);
 }
+
 
 function sortFilmRating(arr){
     arr.sort((a,b) => b.filmRating - a.filmRating)
