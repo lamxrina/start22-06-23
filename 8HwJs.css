@@ -1,55 +1,9 @@
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #1569BC;
-}
-.menu {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+.menu-control .close{
     display: block;
 }
-.dropdown-content a:hover {background-color: #ddd}
-.show {display:block;}
-
-.task1btnMod {
-    background-color: #DBDB4A;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+.menu-control.close-menu .open{
+    display: block;
 }
-.task1btnMod:hover, .task1btnMod:focus {
-    background-color: #ECEC78;
-}
-
-.task2btn {
-    background-color: #DBDB4A;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-.task2btn:hover, .task2btn:focus {
-    background-color: #ECEC78;
+.menu-control.close-menu .close{
+    display: none;
 }

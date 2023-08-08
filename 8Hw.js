@@ -1,36 +1,45 @@
 //Task 1
 
-function myFunction() {
-    document.getElementById("myMenu").classList.toggle("show");
-}
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-  
-      let dropdowns = document.getElementsByClassName("dropdown-content");
-      let i;
-      for (i = 0; i < dropdowns.length; i++) {
-        let openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+window.onload = function(){
+  let menuBtn = document.querySelector('.menu-control');
+  let menu = document.querySelector('.menu');
 
-  //Task 1 modification
 
-function changeText(ev) {
-    if(ev.getAttribute('data-show') === "true") {
-        ev.innerText = "less"
-        ev.setAttribute('data-show', "false"); 
-    }
-    else {
-        ev.innerText = "more"
-        ev.setAttribute('data-show', "true"); 
-    }
-}
+//menuBtn.addEventListener('click', function{
+
+//});
+  menuBtn.onclick = function(){
+    //console.log(menu.classList.contains('hide'));
+    //if (menu.classList.contains('hide')){
+    //  menu.classList.remove('hide');
+    //}
+    //else{
+    // menu.classList.add('hide');
+    //}
+
+    menuBtn.classList.toggle('close-menu');
+    menu.classList.toggle('hide');
+  };
+
 
 //Task 2
 
 
-    
+  let btnGrow = document.querySelector('.grow');
+btnGrow.onclick = function(){
+  let btnStyle = getComputedStyle(btnGrow);
+  //console.log(btnStyle.fontSize);
+  //let fontSize = parseFloat(btnStyle.fontSize);
+  let value = btnStyle.fontSize;
+  let [valueNumber] = value.split('px');
+
+  console.log(valueNumber);
+  let fontSize = Number(valueNumber);
+
+  console.log(fontSize);
+  let newSize = fontSize + 10;
+
+  btnGrow.style.fontSize = `${newSize}px`;
+};
+};
+
